@@ -7,10 +7,10 @@ def main(argv):
     i=str(argv[1])
     o=str(argv[2])
     print('模拟跑了个处理python程序，传入的zip包是'+i)
-    print('模拟等了1秒')
-    time.sleep(1)
+    print('模拟等了10秒')
+    time.sleep(10)
     try:
-        f = open('./files/'+o, 'w')
+        f = open(o, 'w')
         f.write('KANKAN IMG HERE')
     finally:
         if f:
