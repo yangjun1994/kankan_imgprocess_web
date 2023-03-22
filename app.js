@@ -51,7 +51,7 @@ app.post('/upload_img',upload.single('kankan_img_file'),(req,res,next)=>{
         console.log(outfilepath);
 
 
-        let workerProcess = child_process.exec('python pydemo.py ' + infilepath + ' ' + outfilepath, function (error, stdout, stderr) {
+        let workerProcess = child_process.exec('conda run -n nnUNet python diaoyong.py ' + infilepath + ' ' + outfilepath, function (error, stdout, stderr) {
             if (error) {
                 console.log(error.stack);
                 console.log('Error code: ' + error.code);
